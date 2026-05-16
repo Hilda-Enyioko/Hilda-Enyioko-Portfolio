@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bricolage+Grotesque:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #FFFFFF;
+  --off-white: #F7F8FA;
+  --ink: #0A0D14;
+  --ink-muted: rgba(10, 13, 20, 0.55);
+  --ink-faint: rgba(10, 13, 20, 0.25);
+  --border: rgba(10, 13, 20, 0.10);
+  --border-strong: rgba(10, 13, 20, 0.22);
+
+  --serif: 'Bricolage Grotesque', sans-serif;  /* headings */
+  --sans: 'Inter', system-ui, sans-serif;       /* body */
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+img { display: block; max-width: 100%; }
