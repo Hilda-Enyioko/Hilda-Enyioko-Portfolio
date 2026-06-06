@@ -15,7 +15,7 @@ export default function About() {
           <p className={styles.body}>
             I'm Hilda Enyioko — a final-year Electronic Engineering student at FUTO,
             graduating August 2026, and a full-stack software developer focused on
-            fintech infrastructure in Nigeria.
+            financial systems infrastructure.
           </p>
           <p className={styles.body}>
             My work sits at the intersection of payments, product, and people. I build
