@@ -14,7 +14,7 @@ export default function Experience() {
       </div>
 
       <div className={styles.timeline}>
-        {experience.map(({ role, organisation, division, type, period, location, bullets }) => (
+        {experience.map(({ role, organisation, division, period, location, bullets }) => (
           <div key={organisation} className={styles.entry}>
             <div className={styles.entryLeft}>
               <p className={styles.period}>{period}</p>

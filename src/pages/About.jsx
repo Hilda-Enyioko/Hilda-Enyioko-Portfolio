@@ -1,7 +1,23 @@
+import { useState, useEffect } from 'react'
 import styles from './About.module.css'
 import { communities, awards } from '../data/about'
 
 export default function About() {
+  const [activeCommunity, setActiveCommunity] = useState(null)
+
+  useEffect(() => {
+    if (!activeCommunity) return
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setActiveCommunity(null)
+    }
+    document.addEventListener('keydown', onKeyDown)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKeyDown)
+      document.body.style.overflow = ''
+    }
+  }, [activeCommunity])
+
   return (
     <div className={styles.page}>
 
@@ -36,15 +52,22 @@ export default function About() {
         <div className={styles.sectionInner}>
           <span className={styles.label}>Communities I help run</span>
           <div className={styles.communityGrid}>
-            {communities.map(({ name, role, description, image }) => (
-              <div key={name} className={styles.communityCard}>
-                <img src={image} alt={name} className={styles.communityImage} />
+            {communities.map((community) => (
+              <button
+                key={community.name}
+                type="button"
+                className={styles.communityCard}
+                onClick={() => setActiveCommunity(community)}
+                aria-haspopup="dialog"
+              >
+                <img src={community.image} alt={community.name} className={styles.communityImage} />
                 <div className={styles.communityTop}>
-                  <p className={styles.communityName}>{name}</p>
-                  <p className={styles.communityRole}>{role}</p>
+                  <p className={styles.communityName}>{community.name}</p>
+                  <p className={styles.communityRole}>{community.role}</p>
                 </div>
-                <p className={styles.communityDesc}>{description}</p>
-              </div>
+                <p className={styles.communityDesc}>{community.description}</p>
+                <span className={styles.communityMore}>Read more →</span>
+              </button>
             ))}
           </div>
         </div>
@@ -91,17 +114,68 @@ export default function About() {
               Visit channel →
             </a>
           </div>
-          {/* <div className={styles.videoGrid}>
-            {[1, 2, 3].map((i) => (
-              <div key={i} className={styles.videoCard}>
-                <div className={styles.videoThumb} />
-                <p className={styles.videoTitle}>Video title goes here</p>
-                <p className={styles.videoMeta}>Tutorial · 2025</p>
-              </div>
-            ))}
-          </div> */}
         </div>
       </section>
+
+      {/* Community detail modal */}
+      {activeCommunity && (
+        <div
+          className={styles.modalOverlay}
+          role="dialog"
+          aria-modal="true"
+          aria-label={activeCommunity.fullName}
+          onClick={() => setActiveCommunity(null)}
+        >
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className={styles.modalClose}
+              onClick={() => setActiveCommunity(null)}
+              aria-label="Close"
+            >
+              ✕
+            </button>
+
+            <span className={styles.label}>{activeCommunity.role}</span>
+            <h2 className={styles.modalHeading}>{activeCommunity.fullName}</h2>
+
+            <div className={styles.modalSection}>
+              <div className={styles.modalText}>
+                <p className={styles.body}>{activeCommunity.detail.intro}</p>
+              </div>
+              <img
+                src={activeCommunity.detail.introImage}
+                alt={`${activeCommunity.name} overview`}
+                className={styles.modalImage}
+              />
+            </div>
+
+            <div className={`${styles.modalSection} ${styles.modalSectionReverse}`}>
+              <img
+                src={activeCommunity.detail.whatWeDoImage}
+                alt={`${activeCommunity.name} activity`}
+                className={styles.modalImage}
+              />
+              <div className={styles.modalText}>
+                <p className={styles.modalSubheading}>What we do</p>
+                <p className={styles.body}>{activeCommunity.detail.whatWeDo}</p>
+              </div>
+            </div>
+
+            <div className={styles.modalSection}>
+              <div className={styles.modalText}>
+                <p className={styles.modalSubheading}>What we've achieved</p>
+                <p className={styles.body}>{activeCommunity.detail.achievements}</p>
+              </div>
+              <img
+                src={activeCommunity.detail.achievementsImage}
+                alt={`${activeCommunity.name} achievements`}
+                className={styles.modalImage}
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   )

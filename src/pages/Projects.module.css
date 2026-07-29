@@ -120,6 +120,120 @@
   background: var(--off-white);
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.15s ease;
+}
+
+.cardImage {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 180px;
+  margin-bottom: 1rem;
+}
+
+.cardMore {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.modalContent {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  padding: 3rem 2.5rem;
+  position: relative;
+}
+
+.modalClose {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  border: none;
+  background: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modalMeta {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.modalHeading {
+  font-size: 1.75rem;
+  margin: 0.25rem 0 1.5rem;
+}
+
+.modalCoverImage {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 320px;
+  margin-bottom: 1.5rem;
+}
+
+.modalGallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.modalGalleryImage {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 200px;
+}
+
+.modalLinks {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.modalLink {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .modalGallery {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 640px) {
   .card { padding: 1.75rem; }
 }
