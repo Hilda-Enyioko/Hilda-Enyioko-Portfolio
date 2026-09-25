@@ -63,9 +63,9 @@ export const communities = [
 
 export const awards = [
   {
-    title: 'Rising Star',
+    title: 'Rising Star of The Decade Award',
     year: '2026',
-    description: 'Presented by Authoritty x She Code Africa, recognizing emerging talent in the Nigerian tech community.',
+    description: 'Presented by She Code Africa, recognizing emerging talent in the Nigerian tech community.',
   },
   {
     title: 'Stanbic IBTC University Scholarship',

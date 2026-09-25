@@ -10,10 +10,6 @@ export const experience = [
 
       'Integrated and hardened the Paystack REST API and webhooks, implementing dedicated event routing, signature verification, idempotency, and reconciliation checks for reliable payment processing.',
 
-      'Configured Redis using Docker as part of the backend infrastructure, supporting application workflows and state management.',
-
-      'Designed and enforced tiered usage quotas through backend middleware, returning structured API errors when exhibitor plan limits are exceeded across a 5-tier billing system.',
-
       'Secured third-party OAuth integrations, including Meta, using AES-256-GCM encryption and automated token-refresh workflows.',
     ],
   },
