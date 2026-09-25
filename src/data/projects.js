@@ -33,6 +33,23 @@ export const projects = [
     liveUrl: null,
     repoUrl: null,
   },
+    {
+    name: 'AkuMart',
+    category: 'Hackathon · Sustainability',
+    status: 'Hack4FUTO 3rd Edition — Winner',
+    description: 'An eco-friendly B2B marketplace that lets businesses and individuals trade waste seamlessly, turning what would be discarded material into a tradeable resource.',
+    longDescription: 'AkuMart is a waste-to-resource marketplace built to make trading recyclable and reusable waste as simple as any other e-commerce transaction. Instead of waste generators and waste processors operating in disconnected, informal channels, AkuMart gives them a shared platform to list, discover, and transact — turning a manual, relationship-dependent process into something structured and scalable. The project won Hack4FUTO\'s 3rd edition, judged on both technical execution and the strength of the sustainability case behind it.',
+    stack: ['React', 'Node.js', 'PostgreSQL'],
+    images: {
+      cover: '/projects/akumart-cover.png',
+      gallery: [
+        '/projects/akumart-marketplace.png',
+        '/projects/akumart-demo-day.png',
+      ],
+    },
+    liveUrl: null,
+    repoUrl: null,
+  },
   {
     name: 'IoT-Based Hazard Security System',
     category: 'Hardware · IoT',
@@ -45,23 +62,6 @@ export const projects = [
       gallery: [
         '/projects/iot-security-circuit.png',
         '/projects/iot-security-cover.jpeg',
-      ],
-    },
-    liveUrl: null,
-    repoUrl: null,
-  },
-  {
-    name: 'AkuMart',
-    category: 'Hackathon · Sustainability',
-    status: 'Hack4FUTO 3rd Edition — Winner',
-    description: 'An eco-friendly B2B marketplace that lets businesses and individuals trade waste seamlessly, turning what would be discarded material into a tradeable resource.',
-    longDescription: 'AkuMart is a waste-to-resource marketplace built to make trading recyclable and reusable waste as simple as any other e-commerce transaction. Instead of waste generators and waste processors operating in disconnected, informal channels, AkuMart gives them a shared platform to list, discover, and transact — turning a manual, relationship-dependent process into something structured and scalable. The project won Hack4FUTO\'s 3rd edition, judged on both technical execution and the strength of the sustainability case behind it.',
-    stack: ['React', 'Node.js', 'PostgreSQL'],
-    images: {
-      cover: '/projects/akumart-cover.png',
-      gallery: [
-        '/projects/akumart-marketplace.png',
-        '/projects/akumart-demo-day.png',
       ],
     },
     liveUrl: null,
