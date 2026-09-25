@@ -29,14 +29,14 @@ export default function About() {
             Hilda Enyioko
           </h1>
           <p className={styles.body}>
-            I'm Hilda Enyioko — a final-year Electronic Engineering student at FUTO,
+            I'm Hilda Enyioko, a final-year Electronic Engineering student at FUTO,
             graduating August 2026, and a full-stack software developer focused on
             financial systems infrastructure.
           </p>
           <p className={styles.body}>
             My work sits at the intersection of payments, product, and people. I build
             API-first platforms, lead developer communities, and create spaces where
-            more people — especially women — can access and contribute to technology.
+            more people, particularly women, can access and contribute to technology.
           </p>
           <p className={styles.body}>
             I completed an IT internship at Stanbic IBTC Group in the Applications
