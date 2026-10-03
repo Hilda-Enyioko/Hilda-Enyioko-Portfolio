@@ -23,10 +23,6 @@ export default function Projects() {
       <div className={styles.header}>
         <span className={styles.label}>Projects</span>
         <h1 className={styles.heading}>Projects I've Built</h1>
-        <p className={styles.sub}>
-          A mix of fintech infrastructure, community tools, and hardware — all
-          currently in progress or recently completed.
-        </p>
       </div>
 
       <div className={styles.list}>
