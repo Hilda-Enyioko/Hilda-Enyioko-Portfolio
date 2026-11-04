@@ -1,0 +1,4 @@
+.links { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.25rem; }
+.link { width: 40px; height: 40px; display: grid; place-items: center; color: var(--ink-muted); border: 1px solid var(--border); border-radius: 50%; transition: color .2s, border-color .2s, transform .2s; }
+.link:hover { color: var(--ink); border-color: var(--ink); transform: translateY(-2px); }
+.link svg { width: 18px; height: 18px; }
