@@ -18,7 +18,7 @@
   .reviewControls button:hover { transform: scale(1.1); }
 }
 .imageTile:focus-visible, .awardCard:focus-visible, .reviewSlider:focus-visible, .reviewControls button:focus-visible, .dots button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
-.bio { max-width: 760px; margin: 0; }
+.bio { max-width: 760px; margin: 0 auto; }
 .body { color: var(--ink-muted); line-height: 1.85; margin-bottom: 1.2rem; }
 .awardsGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin-top: 2rem; }
 .awardCard { border: 1px solid var(--border); background: var(--white); padding: .85rem; border-radius: 8px; }
