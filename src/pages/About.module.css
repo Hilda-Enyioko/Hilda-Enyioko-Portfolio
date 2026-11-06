@@ -1,11 +1,12 @@
 .page {
+  animation: page-enter var(--t) var(--ease) both;
   padding-top: 64px;
 }
 
 /* Bio */
 .bio {
   background: var(--off-white);
-  padding: 5rem 2rem;
+  padding: 2.5rem 2rem 3rem;
 }
 
 .bioInner {
@@ -231,9 +232,20 @@
   cursor: pointer;
 }
 
-.communityCard:hover {
-  transform: translateY(-2px);
-  transition: transform 0.15s ease;
+.communityCard {
+  transition: transform var(--t) var(--ease), box-shadow var(--t) var(--ease), border-color var(--t) var(--ease), background var(--t) var(--ease);
+}
+
+@media (hover: hover) {
+  .communityCard:hover { transform: var(--lift); box-shadow: var(--shadow-hover); }
+  .communityCard:hover .communityMore { transform: translateX(4px); }
+  .communityMore { transition: transform var(--t) var(--ease); }
+  .youtubeBtn:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+}
+
+.youtubeBtn {
+  transition: transform var(--t) var(--ease), box-shadow var(--t) var(--ease), opacity var(--t) var(--ease);
+
 }
 
 .communityMore {

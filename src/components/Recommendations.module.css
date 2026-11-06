@@ -40,7 +40,7 @@
   opacity: 0;
   transform: translateY(12px);
   pointer-events: none;
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity var(--t) var(--ease), transform var(--t) var(--ease), box-shadow var(--t) var(--ease), border-color var(--t) var(--ease);
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--off-white);
