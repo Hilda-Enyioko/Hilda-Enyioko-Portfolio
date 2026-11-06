@@ -39,9 +39,11 @@
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--ink-muted);
-  transition: color 0.2s;
+  transition: color var(--t) var(--ease);
   position: relative;
 }
+.link::after { content: ''; position: absolute; left: 0; right: 0; bottom: -4px; height: 1.5px; background: var(--ink); transform: scaleX(0); transform-origin: left; transition: transform var(--t) var(--ease); }
+.link:hover::after, .link.active::after { transform: scaleX(1); }
 
 .link:hover {
   color: var(--ink);
