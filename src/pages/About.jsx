@@ -3,6 +3,7 @@ import styles from './About.module.css'
 import { awards } from '../data/about'
 import { aboutImages } from '../data/aboutImages'
 import { reviews } from '../data/reviews'
+import Reveal from '../components/Reveal'
 
 function SafeImage({ src, alt, className }) { const [visible, setVisible] = useState(true); return visible ? <img src={src} alt={alt} className={className} onError={() => setVisible(false)} /> : null }
 
@@ -15,7 +16,7 @@ function Reviews() {
   return <section className={styles.section}><div className={styles.sectionInner}><span className={styles.label}>What people say</span><div className={styles.reviewSlider} tabIndex="0" role="region" aria-roledescription="carousel" aria-label="Recommendations" onKeyDown={(e) => { if (e.key === 'ArrowLeft') setPage(Math.max(0, page - 1)); if (e.key === 'ArrowRight') setPage(Math.min(pages - 1, page + 1)) }}><div className={styles.reviewTrack} style={{ transform: `translateX(-${currentPage * 100}%)` }}>{reviews.map((review) => <article className={styles.review} key={review.name}><span className={styles.quoteMark}>“</span><p className={styles.quote}>{review.quote}</p><div><strong>{review.name}</strong><p className={styles.reviewRole}>{review.role}</p></div></article>)}</div></div>{pages > 1 && <div className={styles.reviewControls}><button type="button" aria-label="Previous reviews" onClick={() => setPage(Math.max(0, page - 1))}>←</button><div className={styles.dots}>{Array.from({ length: pages }, (_, i) => <button type="button" key={i} aria-label={`Go to review page ${i + 1}`} className={i === currentPage ? styles.dotActive : ''} onClick={() => setPage(i)} />)}</div><button type="button" aria-label="Next reviews" onClick={() => setPage(Math.min(pages - 1, page + 1))}>→</button></div>}</div></section>
 }
 
-export default function About() { return <div className={styles.page}><section className={styles.intro}><h1 className={styles.heading}>About Me</h1><p className={styles.oneLiner}>Code, Community &amp; Impact</p><div className={styles.imageGrid}>{aboutImages.map((image) => <div className={styles.imageTile} key={image.src}><SafeImage {...image} className={styles.galleryImage} /></div>)}</div></section><section className={styles.section}>
+export default function About() { return <div className={styles.page}><section className={styles.intro}><h1 className={styles.heading}>About Me</h1><p className={styles.oneLiner}>Code, Community &amp; Impact</p><Reveal className={styles.imageGrid}>{aboutImages.map((image, index) => <div className={styles.imageTile} style={{ '--reveal-delay': `${Math.min(index * 60, 300)}ms` }} key={image.src}><SafeImage {...image} className={styles.galleryImage} /></div>)}</Reveal></section><section className={styles.section}>
   <div className={styles.sectionInner}>
     <div className={styles.bio}>
       {[
@@ -29,4 +30,4 @@ export default function About() { return <div className={styles.page}><section c
       ))}
     </div>
   </div>
-</section><section className={styles.section}><div className={styles.sectionInner}><span className={styles.label}>Awards &amp; scholarships</span><div className={styles.awardsGrid}>{awards.map((award) => <article className={styles.awardCard} key={award.title}><div className={styles.awardImage}><SafeImage src={award.image} alt="" className={styles.galleryImage} /></div><span className={styles.awardYear}>{award.year}</span><h2>{award.title}</h2><p>{award.description}</p></article>)}</div></div></section><Reviews /></div> }
+</section><section className={styles.section}><div className={styles.sectionInner}><span className={styles.label}>Awards &amp; scholarships</span><Reveal className={styles.awardsGrid}>{awards.map((award, index) => <article className={styles.awardCard} style={{ '--reveal-delay': `${Math.min(index * 60, 300)}ms` }} key={award.title}><div className={styles.awardImage}><SafeImage src={award.image} alt="" className={styles.galleryImage} /></div><span className={styles.awardYear}>{award.year}</span><h2>{award.title}</h2><p>{award.description}</p></article>)}</Reveal></div></section><Reviews /></div> }

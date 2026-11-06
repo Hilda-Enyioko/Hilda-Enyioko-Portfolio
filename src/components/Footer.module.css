@@ -1,4 +1,5 @@
 .footer {
+  background: transparent;
   border-top: 1px solid var(--border);
   padding: 1.5rem 2rem;
   display: flex;
@@ -24,4 +25,6 @@
   transition: color 0.2s;
 }
 
+.socials a { transition: color var(--t) var(--ease), transform var(--t) var(--ease); }
 .socials a:hover { color: var(--ink); }
+.socials a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }

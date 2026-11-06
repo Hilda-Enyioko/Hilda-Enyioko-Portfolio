@@ -9,4 +9,4 @@ import Insights from './pages/Insights'
 import Experience from './pages/Experience'
 import Contact from './pages/Contact'
 
-export default function App() { const location = useLocation(); return <><Navbar /><Routes><Route path="/" element={<Home />} /><Route path="/about" element={<About />} /><Route path="/projects" element={<Projects />} /><Route path="/community" element={<Community />} /><Route path="/insights" element={<Insights />} /><Route path="/experience" element={<Experience />} /><Route path="/contact" element={<Contact />} /></Routes>{location.pathname !== '/' && <Footer />}</> }
+export default function App() { const location = useLocation(); return <div className="appShell"><Navbar /><main className="routeContent"><Routes><Route path="/" element={<Home />} /><Route path="/about" element={<About />} /><Route path="/projects" element={<Projects />} /><Route path="/community" element={<Community />} /><Route path="/insights" element={<Insights />} /><Route path="/experience" element={<Experience />} /><Route path="/contact" element={<Contact />} /></Routes></main>{location.pathname !== '/' && <Footer />}</div> }
