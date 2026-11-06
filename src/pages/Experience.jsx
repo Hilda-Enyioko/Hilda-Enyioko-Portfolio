@@ -5,7 +5,6 @@ export default function Experience() {
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <span className={styles.label}>Experience</span>
         <h1 className={styles.heading}>Places I've worked<br />and contributed</h1>
         <p className={styles.sub}>
           Professional experience and community leadership roles that have
