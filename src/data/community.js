@@ -7,11 +7,37 @@ export const communities = [
     { title: 'IDC-FUTO Pioneer Community Project', text: 'FUTO Aid, built using the Interswitch payment gateway.' },
     { title: 'Open contribution', text: 'Community members, including non-developers, contributed through programs like beta testing.' },
   ], achievementsImage: '/idc-futo-achievement.jpg' } },
-  { name: 'SCA Owerri', fullName: 'She Code Africa, Owerri Chapter', role: 'Chapter Lead', image: '/sca-owerri.png', description: 'Running a virtual-first chapter focused on supporting women in tech across Owerri, Imo State, Nigeria, with monthly programming, campus visits, and a Girl Child Tech Day.', detail: { intro: 'She Code Africa Owerri exists to close the gender gap in Nigerian tech — creating a space where women can learn to code, find mentorship, and see a path into the industry.', introImage: '/sca-owerri-intro.png', whatWeDo: 'We run monthly virtual programming, campus visits to universities across Owerri, and Girl Child Tech Day sessions aimed at introducing younger girls to tech careers early.', whatWeDoImage: '/sca-owerri-activity.jpg', highlights: [{ title: '34% membership growth', text: 'In four months.' }, { title: '3 events held', text: 'Virtual sessions on community, web development, and cloud & DevOps.' }], achievementsImage: '/sca-owerri-achievement.png', events: [
-    { title: 'Community & Me', date: '9 May 2026', format: 'Virtual', description: 'A session on helping community members navigate finding opportunities and networking within the SCA Community.', eventUrl: 'https://luma.com/0es1mjfn', promoUrl: 'https://www.instagram.com/p/DYHAG_tDda2/' },
-    { title: "Queen's Starter Pack To Web Development", date: '13 June 2026', format: 'Virtual', description: 'A session on starting out in frontend and backend web development with provided resources.', eventUrl: 'https://luma.com/6tnpnyx1', promoUrl: 'https://www.instagram.com/p/DZnp1T3jrX8/' },
-    { title: "Queen's Starter Pack to Cloud & DevOps Engineering", date: '22 August 2026', format: 'Virtual', description: 'In partnership with AWS SBG FUTO, this session focused on building a long-term career in Cloud and DevOps Engineering.', eventUrl: 'https://luma.com/abehfcmu', promoUrl: 'https://www.instagram.com/p/DbjR5udO5xG/' },
-  ] } },
-  { name: 'Hack4FUTO', fullName: 'Hack4FUTO Hackathon', role: 'Co-Convener', image: '/hack4futo.png', description: "Co-organizing FUTO's flagship student hackathon — now in its 5th edition, and the largest student-led hackathon in Southeast Nigeria, reaching 1,600+ registered attendees.", detail: { intro: "Hack4FUTO is FUTO's flagship student hackathon — a yearly convening where students turn ideas into shipped products over an intense, short window, with real industry stakes attached.", introImage: '/hack4futo-intro.jpg', whatWeDo: 'As Co-Convener, I lead on speaker curation, sponsorship partnerships, and event logistics — coordinating with industry partners to bring expertise, tooling, and prize support directly to student teams.', whatWeDoImage: '/hack4futo-activity.jpg', highlights: [{ title: '5th edition', text: 'The largest student-led hackathon in Southeast Nigeria.' }, { title: '1,600+ registrations', text: 'Across the fifth edition.' }, { title: '500+ active builders', text: 'Building and shipping during the event.' }, { title: '₦4.5M+ in prizes', text: 'Supported by industry sponsors and partners.' }], achievementsImage: '/hack4futo-achievement.jpg' } },
-  { name: 'Inclusive Talks', fullName: 'Inclusive Talks', role: 'Founder', image: '/inclusive-talks.jpg', description: 'A blog and NGO I founded at 17, dedicated to diversity and inclusion. Closed 2025.', detail: { intro: 'Inclusive Talks started as a blog I founded at 17, during an eight-month university strike, and grew into an NGO focused on diversity, inclusion, and student wellbeing.', introImage: '/inclusive-talks-intro.jpg', whatWeDo: 'We ran student outreach programs and mental health awareness events, and distributed care packages and academic materials to students who needed them.', whatWeDoImage: '/inclusive-talks-activity.jpg', achievements: 'Through our Student Outreach Program, we supported over 50 students with foodstuff and academic materials. Our “What Makes You Feel Excluded” program gave students a platform to speak openly about mental health and social struggles.', achievementsImage: '/inclusive-talks-achievement.jpg' } },
+  { name: 'SCA Owerri', fullName: 'She Code Africa, Owerri Chapter', role: 'Chapter Lead', image: '/sca-owerri.png', description: 'Running a virtual-first chapter focused on supporting women in tech across Owerri, Imo State, Nigeria, with monthly programming, campus visits, and a Girl Child Tech Day.', detail: {
+    intro: 'She Code Africa Owerri exists to close the gender gap in Nigerian tech — creating a space where women can learn to code, find mentorship, and see a path into the industry.',
+    introImage: '/sca-owerri-intro.png',
+    whatWeDo: 'We run monthly virtual programming, campus visits to universities across Owerri, and Girl Child Tech Day sessions aimed at introducing younger girls to tech careers early.',
+    whatWeDoImage: '/sca-owerri-activity.jpg',
+    highlights: [
+      {
+        title: '34% membership growth',
+        text: 'Reached 265 members in four months.'
+      },
+      { 
+        title: '98 total event attendances', 
+        text: 'Virtual sessions on community-focused growth, starting a career in web development, and cloud & DevOps.'
+      },
+      {
+        title: 'AWS SBG FUTO partnership',
+        text: 'A partnership with AWS SBG FUTO to run a cloud & DevOps workshop for students.'
+      },
+      {
+        title: 'Outreach with WAAW Foundation, FUTO',
+        text: 'Organized high-school focused outreach sessions to introduce girls to tech careers.'
+      }
+    ], achievementsImage: '/sca-owerri-achievement.png',
+   } },
+  { name: 'Hack4FUTO', fullName: 'Hack4FUTO Hackathon', role: 'Co-Convener', image: '/hack4futo.png', description: "Co-organizing FUTO's flagship student hackathon — now in its 5th edition, and the largest student-led hackathon in Southeast Nigeria, reaching 1,600+ registered attendees.", detail: { intro: "Hack4FUTO is FUTO's flagship student hackathon — a yearly convening where students turn ideas into shipped products over an intense, short window, with real industry stakes attached.", introImage: '/hack4futo-intro.jpg', whatWeDo: 'As Co-Convener, I lead on speaker curation, sponsorship partnerships, and event logistics — coordinating with industry partners to bring expertise, tooling, and prize support directly to student teams.', whatWeDoImage: '/hack4futo-activity.jpg', highlights: [{ title: '5th edition', text: 'The largest student-led hackathon in Southeast Nigeria.' }, { title: '1,600+ registrations', text: 'Record breaking attendance across the fifth edition.' }, { title: '500+ active builders', text: 'Brought together builders and designers of different skillset levels to drive innovation.' }, { title: '₦4.5M+ in prizes', text: 'Supported by industry sponsors and partners such as Superteam NG, Cleva Bank, Mentifyx' }, { title: 'Industry partnerships', text: 'Speakers, judges, and sponsors coordinated with industry partners to bring expertise and mentorship to student teams.' }], achievementsImage: '/hack4futo-achievement.jpg' } },
+  { name: 'Inclusive Talks', fullName: 'Inclusive Talks', role: 'Founder', image: '/inclusive-talks.jpg', description: 'A blog and NGO I founded at 17, dedicated to diversity and inclusion. Closed 2025.', detail: { intro: 'Inclusive Talks started as a blog I founded at 17, during an eight-month university strike, and grew into an NGO focused on diversity, inclusion, and student wellbeing.', introImage: '/inclusive-talks-intro.jpg', whatWeDo: 'We ran student outreach programs and mental health awareness events, and distributed care packages and academic materials to students who needed them.', whatWeDoImage: '/inclusive-talks-activity.jpg',
+    highlights: [
+      { title: 'Blog on social issues', text: 'A platform for discussing discrimination and financial inclusion.' },
+      { title: 'Guest writing program', text: 'Opened the blog to students, giving them a space to write and share their own perspectives.' },
+      { title: '50+ students supported', text: 'Provided foodstuff and academic materials to students through our outreach program, in partnership with FUTO student bodies.' },
+      { title: '"What Makes You Feel Excluded"', text: 'A program that gave students a platform to speak openly about mental health and social struggles.' },
+    ], achievementsImage: '/inclusive-talks-achievement.jpg' 
+  } },
 ]
